@@ -1,2 +1,1 @@
-# EcommerceMain
-mini-projeto
+# PagEcommerse
