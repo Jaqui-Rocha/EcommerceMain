@@ -17,7 +17,8 @@ export default function Carrinho({changeTela, cart, AddCarrinho, count }){
                 <Box>
                 <h2>{item.title}</h2>
                 <Price>Valor: R${item.price}</Price>
-                <Price>Quantidade:  </Price>          
+                <Price>Quantidade: {} </Price>    
+                <button>+</button>      <button>-</button>
                 </Box>         
                                
               </Row>

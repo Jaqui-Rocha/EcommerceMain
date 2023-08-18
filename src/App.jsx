@@ -25,7 +25,7 @@ if(cart.includes(item)){
 }
 setCart(prevItem => [...prevItem, item]); //pegar valor anterior do state, mantem ele, e adiciona um novo.
 setCount(count + 1);
- 
+return 
   }
   return (
     <Layout>
