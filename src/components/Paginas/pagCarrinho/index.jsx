@@ -7,7 +7,7 @@ export default function Carrinho({changeTela, cart, AddCarrinho, count, Somar, D
             Carrinho <No>{count}</No>
         </H1>
         <div>
-        {cart.map((item,index) => {
+        {cart.map((item) => {
           return (
             <Column key={item.id}>
               <Row>
@@ -18,9 +18,10 @@ export default function Carrinho({changeTela, cart, AddCarrinho, count, Somar, D
                 <h2>{item.title}</h2>
                 <Price>Valor: R${item.price}</Price>
                 <Price>Quantidade: {contador} </Price>   
-                
-                <button onClick={()=>Somar()}>+</button>      
-                <button onClick={()=>Diminuir()}>-</button>
+                <div >
+                  <Botao  onClick={()=>Somar()}>+</Botao>      
+                  <Botao  onClick={()=>Diminuir()}>-</Botao>
+                </div>
                 </Box>         
                                
               </Row>

@@ -19,11 +19,10 @@ const [cart,setCart]= useState([])
 const[count,setCount]=useState(0)
 const [contador,setContador]=useState(1)
 
-const Somar=(item)=>{
- 
-  setContador(contador + 1);
+const Somar=()=>{
+   setContador(contador + 1);
 };
- const Diminuir=(item)=>{
+ const Diminuir=()=>{
   contador >0 &&
   setContador(contador -1);
  
