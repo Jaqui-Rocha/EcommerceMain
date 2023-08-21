@@ -18,6 +18,17 @@ const [produtos,setProdutos]= useState(Array)
 const [cart,setCart]= useState([])
 const[count,setCount]=useState(0)
 const [contador,setContador]=useState(1)
+
+const Somar=(item)=>{
+ 
+  setContador(contador + 1);
+};
+ const Diminuir=(item)=>{
+  contador >0 &&
+  setContador(contador -1);
+ 
+}
+
 const AddCarrinho = (item) => {
 if(cart.includes(item)){
      console.log('teste: ', item)
@@ -27,14 +38,16 @@ setCart(prevItem => [...prevItem, item]); //pegar valor anterior do state, mante
 setCount(count + 1);
 return 
   }
+
+
   return (
     <Layout>
 	
       
-          {tela===TELAS.PAGPRODUTOS &&<Produtos changeTela={setTela} produtos={produtos} AddCarrinho={AddCarrinho} count={count}/>}
+          {tela===TELAS.PAGPRODUTOS &&<Produtos changeTela={setTela} produtos={produtos} AddCarrinho={AddCarrinho} count={count} />}
                   
           
-          {tela===TELAS.PAGCARRINHO &&<Carrinho changeTela={setTela} cart={cart}  produtos={produtos} AddCarrinho={AddCarrinho} count={count} />}
+          {tela===TELAS.PAGCARRINHO &&<Carrinho changeTela={setTela} cart={cart}  produtos={produtos} AddCarrinho={AddCarrinho} count={count} Somar={Somar} Diminuir={Diminuir} contador={contador} />}
           {tela===TELAS.PAGCHECKOUNT &&<Checkout changeTela={setTela} produtos={produtos}/>}
          </Layout>
   )

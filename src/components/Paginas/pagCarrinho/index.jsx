@@ -1,13 +1,13 @@
 import { Botao, Conteiner, No ,H1,Price,Image, Row, Box, Column} from "./styled"
 
-export default function Carrinho({changeTela, cart, AddCarrinho, count }){
+export default function Carrinho({changeTela, cart, AddCarrinho, count, Somar, Diminuir,contador }){
     return(
         <Conteiner>
         <H1>
             Carrinho <No>{count}</No>
         </H1>
         <div>
-        {cart.map((item) => {
+        {cart.map((item,index) => {
           return (
             <Column key={item.id}>
               <Row>
@@ -17,8 +17,10 @@ export default function Carrinho({changeTela, cart, AddCarrinho, count }){
                 <Box>
                 <h2>{item.title}</h2>
                 <Price>Valor: R${item.price}</Price>
-                <Price>Quantidade: {} </Price>    
-                <button>+</button>      <button>-</button>
+                <Price>Quantidade: {contador} </Price>   
+                
+                <button onClick={()=>Somar()}>+</button>      
+                <button onClick={()=>Diminuir()}>-</button>
                 </Box>         
                                
               </Row>
