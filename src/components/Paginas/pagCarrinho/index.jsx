@@ -17,10 +17,10 @@ export default function Carrinho({changeTela, cart, AddCarrinho, count, Somar, D
                 <Box>
                 <h2>{item.title}</h2>
                 <Price>Valor: R${item.price}</Price>
-                <Price>Quantidade: {contador} </Price>   
+                <Price>Quantidade: {item.qtd} </Price>   
                 <div >
-                  <Botao  onClick={()=>Somar()}>+</Botao>      
-                  <Botao  onClick={()=>Diminuir()}>-</Botao>
+                  <Botao  onClick={()=>Somar(item)}>+</Botao>      
+                  <Botao  onClick={()=>Diminuir(item)}>-</Botao>
                 </div>
                 </Box>         
                                

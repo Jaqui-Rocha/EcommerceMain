@@ -7,6 +7,7 @@ font-size:16 px;
 color: white;
 padding:5px;
 gap: 5 px;
+cursor: pointer;
 `;
 export const Row = styled.div`
   display: flex;
