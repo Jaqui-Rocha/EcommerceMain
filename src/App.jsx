@@ -20,12 +20,12 @@ const[count,setCount]=useState(0)
 const [contador,setContador]=useState(1)
 
 const Somar=(item)=>{
-  setContador(contador + 1);
-   return item.qnt++
+   setContador(contador + 1);
+   return item.qtd++
 };
  const Diminuir=(item)=>{
   contador >0 &&
-  setContador(contador -1); 
+  setContador(contador -1);
   return item.qtd--
  
 }
@@ -45,11 +45,9 @@ return
     <Layout>
 	
       
-          {tela===TELAS.PAGPRODUTOS &&<Produtos changeTela={setTela} produtos={produtos} AddCarrinho={AddCarrinho} count={count} />}
-                  
-          
-          {tela===TELAS.PAGCARRINHO &&<Carrinho changeTela={setTela} cart={cart}  produtos={produtos} AddCarrinho={AddCarrinho} count={count} Somar={Somar} Diminuir={Diminuir} contador={contador} />}
-          {tela===TELAS.PAGCHECKOUNT &&<Checkout changeTela={setTela} produtos={produtos}/>}
-         </Layout>
+      {tela===TELAS.PAGPRODUTOS &&<Produtos changeTela={setTela} produtos={produtos} AddCarrinho={AddCarrinho} count={count} />}                
+      {tela===TELAS.PAGCARRINHO &&<Carrinho changeTela={setTela} cart={cart}  produtos={produtos} AddCarrinho={AddCarrinho} count={count} Somar={Somar} Diminuir={Diminuir} contador={contador} />}
+      {tela===TELAS.PAGCHECKOUNT &&<Checkout changeTela={setTela} produtos={produtos} count={count} cart={cart}/>}
+    </Layout>
   )
 }
