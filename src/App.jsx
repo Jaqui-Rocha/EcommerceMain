@@ -47,7 +47,7 @@ return
       
       {tela===TELAS.PAGPRODUTOS &&<Produtos changeTela={setTela} produtos={produtos} AddCarrinho={AddCarrinho} count={count} />}                
       {tela===TELAS.PAGCARRINHO &&<Carrinho changeTela={setTela} cart={cart}  produtos={produtos} AddCarrinho={AddCarrinho} count={count} Somar={Somar} Diminuir={Diminuir} contador={contador} />}
-      {tela===TELAS.PAGCHECKOUNT &&<Checkout changeTela={setTela} produtos={produtos} count={count} cart={cart}/>}
+      {tela===TELAS.PAGCHECKOUNT &&<Checkout changeTela={setTela} produtos={produtos} count={count} cart={cart} setContador={setContador}/>}
     </Layout>
   )
 }

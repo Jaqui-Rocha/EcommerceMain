@@ -15,7 +15,7 @@ export const Column = styled.div``;
 export const Row = styled.div``;
 export const Box = styled.div``;
 export const Price = styled.div``;
-export const Image = styled.div`
+export const Image = styled.img`
  object-fit: contain;
   max-width: 70%;
   width: 200px;
